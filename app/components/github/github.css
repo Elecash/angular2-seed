@@ -1,0 +1,8 @@
+:host .project h3, :host .project h4 {
+  display: inline-block;
+}
+
+:host .project h4:before {
+  content: '\\2B50';
+  margin-left: 10px;
+}

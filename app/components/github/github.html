@@ -3,7 +3,7 @@
   <button type="submit">Search</button>
 </form>
 
-<div *ng-for="#project of projects">
+<div *ng-for="#project of projects" class="project">
   <h3>{{ project.name }}</h3>
   <h4>{{ project.stargazers_count }}</h4>
   <p>{{ project.description }}</p>

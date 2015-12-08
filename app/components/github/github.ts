@@ -6,7 +6,7 @@ import {GithubService} from '../../services/github_service';
   selector: 'github',
   templateUrl: './components/github/github.html',
   styleUrls: ['./components/github/github.css'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.Emulated,
   directives: [CORE_DIRECTIVES]
 })
 export class GithubCmp {
@@ -19,8 +19,9 @@ export class GithubCmp {
   onSearch(search) {
     this.ghService
       .search(search.value)
-      .map(res => res.json())
-      .subscribe(projects => this.projects = projects.items);
+      .map(res => res.json().items)
+      .map(projects => projects.sort((a, b) => (b.stargazers_count - a.stargazers_count)))
+      .subscribe(projects => this.projects = projects);
   }
 }
 
