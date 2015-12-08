@@ -1,0 +1,10 @@
+<form (submit)="onSearch(search)">
+  <input type="text" #search>
+  <button type="submit">Search</button>
+</form>
+
+<div *ng-for="#project of projects">
+  <h3>{{ project.name }}</h3>
+  <h4>{{ project.stargazers_count }}</h4>
+  <p>{{ project.description }}</p>
+</div>
