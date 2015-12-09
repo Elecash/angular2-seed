@@ -24,4 +24,3 @@ export class GithubCmp {
       .subscribe(projects => this.projects = projects);
   }
 }
-

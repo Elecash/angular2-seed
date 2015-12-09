@@ -1,7 +1,7 @@
 import {Injectable} from 'angular2/angular2';
 import {Http} from 'angular2/http';
 import Observable from '../../node_modules/@reactivex/rxjs/src/Observable';
-import Response = Express.Response;
+import {Response} from '../../node_modules/angular2/ts/src/http/static_response';
 
 @Injectable()
 export class GithubService {
