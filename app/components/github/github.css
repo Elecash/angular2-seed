@@ -3,6 +3,7 @@
 }
 
 :host .project h4:before {
-  content: '\\2B50';
+  content: url('components/github/star.svg');
   margin-left: 10px;
+  vertical-align: sub;
 }
